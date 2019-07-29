@@ -105,7 +105,7 @@ if (!JavaVersion.current().java8Compatible) {
   throw new IllegalStateException("Must be built with Java 8 or higher")
 }
 
-
+apply plugin: 'maven'
 apply plugin: "artifactory"
 apply plugin: "com.github.kt3k.coveralls"
 apply plugin: "com.github.ben-manes.versions"
@@ -148,7 +148,7 @@ task bintrayPublish() {
 }
 
 allprojects {
-  group = "io.ratpack"
+  group = "com.github.macobo"
 
   apply plugin: "base"
   apply plugin: "idea"
